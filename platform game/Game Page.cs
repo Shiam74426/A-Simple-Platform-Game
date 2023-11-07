@@ -117,13 +117,21 @@ namespace Platform_Game
                 gameTimer.Stop();
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Your quest is complete!";
+
             }
             else
             {
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
+               // MessageBox.Show("You Lose", "Game Over");
             }
 
         }
+
+        private void txtScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)

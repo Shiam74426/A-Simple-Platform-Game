@@ -114,12 +114,13 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(476, 9);
+            this.txtScore.Location = new System.Drawing.Point(370, 9);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(175, 56);
+            this.txtScore.Size = new System.Drawing.Size(281, 70);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score:0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.txtScore.Click += new System.EventHandler(this.txtScore_Click);
             // 
             // pictureBox1
             // 

@@ -10,28 +10,27 @@ using System.Windows.Forms;
 
 namespace platform_game
 {
-    public partial class Form4 : Form
+    public partial class StartingPage : Form
     {
-        public Form4()
+        public StartingPage()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Application.Run(new platform_game.Form2());
-            Registration form2 =new Registration();
+            Registration form2 = new Registration();
             form2.Show();
             this.Hide();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Application.Run(new platform_game.Form3());
-            Form3 form3 = new Form3();
+            Login form3 = new Login();
             form3.Show();
             this.Hide();
-            
+
         }
     }
 }

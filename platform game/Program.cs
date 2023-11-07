@@ -17,7 +17,7 @@ namespace platform_game
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new platform_game.Game());
+            Application.Run(new platform_game.StartingPage());
             //Application.Run(new platform_game.Form2());
             //Application.Run(new platform_game.Form3());
             //Application.Run(new Platform_Game.Form1());

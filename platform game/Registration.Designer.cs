@@ -50,7 +50,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -71,7 +70,6 @@
             this.userName_reg.Name = "userName_reg";
             this.userName_reg.Size = new System.Drawing.Size(232, 23);
             this.userName_reg.TabIndex = 2;
-            this.userName_reg.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // passWord_reg
             // 
@@ -176,7 +174,7 @@
             this.mobileNumber.Size = new System.Drawing.Size(232, 23);
             this.mobileNumber.TabIndex = 18;
             // 
-            // Form2
+            // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,9 +194,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();
 
