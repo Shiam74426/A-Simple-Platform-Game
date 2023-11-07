@@ -23,15 +23,18 @@ namespace platform_game
 
         private void X_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.Show();
+            Form4 form = new Form4();
+            form.Show();
             this.Hide();
             
         }
 
         private void signIn_Click(object sender, EventArgs e)
         {
-            conn.Open();
+            
+            String userName, passWord;
+            userName = userName_log.Text;
+            passWord = passWord_log.Text;
             SqlCommand cmd = new SqlCommand("select * from Reg where Username=@Username and Password = @Password", conn);
             cmd.Parameters.AddWithValue("@Username", userName_log.Text);
             
@@ -51,22 +54,27 @@ namespace platform_game
             if (dataTable.Rows.Count > 0)
             {
                 //MessageBox.Show("Log in completed");
-                userName_log.Clear();
-                passWord_log.Clear();
+                userName = userName_log.Text;
+                passWord = passWord_log.Text;
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Hide();
+                
                 
 
             }
             else
             {
                 MessageBox.Show("incorrect username or password");
-                return;
+                userName_log.Clear();
+                userName_log.Focus();
+                passWord_log.Clear();
+                //return;
             }
-            //conn.Close();
+            
             
             conn.Close();
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
+            
         }
     }
     

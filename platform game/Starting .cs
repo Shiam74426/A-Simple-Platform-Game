@@ -20,7 +20,7 @@ namespace platform_game
         private void button1_Click(object sender, EventArgs e)
         {
             //Application.Run(new platform_game.Form2());
-            Form2 form2 =new Form2();
+            Registration form2 =new Registration();
             form2.Show();
             this.Hide();
         }

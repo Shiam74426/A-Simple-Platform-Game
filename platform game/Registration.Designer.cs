@@ -1,6 +1,6 @@
 ﻿namespace platform_game
 {
-    partial class Form2
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.
