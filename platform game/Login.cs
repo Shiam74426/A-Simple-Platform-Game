@@ -14,6 +14,8 @@ namespace platform_game
 {
     public partial class Login : Form
     {
+        functionCall aForm = new functionCall();
+        
         public Login()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace platform_game
         {
 
         }
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GTCAF1U\\SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GTCAF1U\\SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True");
         private void X_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
@@ -37,7 +39,8 @@ namespace platform_game
             String userName, passWord;
             userName = userName_log.Text;
             passWord = passWord_log.Text;
-            SqlCommand cmd = new SqlCommand("select * from Reg where Username=@Username and Password = @Password", conn);
+            SqlConnection sqlConnection = aForm.GetSqlConnection();
+            SqlCommand cmd = new SqlCommand("select * from Reg where Username=@Username and Password = @Password",aForm.GetSqlConnection());
             cmd.Parameters.AddWithValue("@Username", userName_log.Text);
 
             cmd.Parameters.AddWithValue("@Password", passWord_log.Text);
@@ -75,7 +78,7 @@ namespace platform_game
             }
 
 
-            conn.Close();
+            //conn.Close();
 
         }
 

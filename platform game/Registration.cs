@@ -13,11 +13,12 @@ namespace platform_game
 {
     public partial class Registration : Form
     {
+        functionCall aForm = new functionCall();
         public Registration()
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GTCAF1U\\SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GTCAF1U\\SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True");
         private void signUp_Click(object sender, EventArgs e)
         {
             if (userName_reg.Text.Trim() == "")
@@ -38,16 +39,17 @@ namespace platform_game
 
             try
             {
-                conn.Open();
+                //conn.Open();
+                SqlConnection sqlConnection = aForm.GetSqlConnection();
                 var insertQuery = "insert into Reg values(@Username,@Password,@Email,@Mobile)";
-                SqlCommand cmd = new SqlCommand(insertQuery, conn);
+                SqlCommand cmd = new SqlCommand(insertQuery, sqlConnection);
                 cmd.Parameters.AddWithValue("@Username", userName_reg.Text);
                 cmd.Parameters.AddWithValue("@Password", passWord_reg.Text);
                 cmd.Parameters.AddWithValue("@Email", email.Text);
                 cmd.Parameters.AddWithValue("@Mobile", mobileNumber.Text);
 
                 cmd.ExecuteNonQuery();
-                conn.Close();
+                //conn.Close();
                 userName_reg.Clear();
                 passWord_reg.Clear();
                 email.Clear();
