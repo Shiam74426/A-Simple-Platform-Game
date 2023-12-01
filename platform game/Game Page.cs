@@ -21,6 +21,7 @@ namespace Platform_Game
         int verticalSpeed = 3;
         int enemyOneSpeed = 5;
         int enemyTwoSpeed = 3;
+
         public Form1()
         {
             InitializeComponent();
@@ -123,6 +124,10 @@ namespace Platform_Game
             {
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
                // MessageBox.Show("You Lose", "Game Over");
+            }
+            if (isGameOver)
+            {
+                MessageBox.Show("Game Over, Your Score is: "+ score, "Game Over");
             }
 
         }

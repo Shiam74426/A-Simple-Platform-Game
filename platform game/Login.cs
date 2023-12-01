@@ -28,7 +28,7 @@ namespace platform_game
         //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GTCAF1U\\SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True");
         private void X_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            StartingPage form = new StartingPage();
             form.Show();
             this.Hide();
 

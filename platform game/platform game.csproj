@@ -67,12 +67,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scoreSave.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="scoreSave.Designer.cs">
-      <DependentUpon>scoreSave.cs</DependentUpon>
-    </Compile>
     <Compile Include="StartingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +91,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="scoreSave.resx">
-      <DependentUpon>scoreSave.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StartingPage.resx">
       <DependentUpon>StartingPage.cs</DependentUpon>
     </EmbeddedResource>
